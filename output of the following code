@@ -1,0 +1,4 @@
+Initial values: a=10, b=5, c=10.
+Condition (a > b) && (a <= c) evaluates to (10 > 5) && (10 <= 10) → true && true → true.
+The true branch executes: a = a + 1 → a becomes 11; c remains 10.
+printf prints "a=11, c=10".

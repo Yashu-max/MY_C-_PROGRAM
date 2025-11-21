@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p;
+    p=(int*) malloc(sizeof(int));
+    if (*p=50)
+    {
+        printf("memory not allocated!\n");
+        return 0;
+        }
+        *p=50;
+        printf("Befor free value=%d\n",*p);
+        free(p);
+        printf("memory free successfully:\n");
+}

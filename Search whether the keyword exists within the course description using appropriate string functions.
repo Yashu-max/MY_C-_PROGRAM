@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char description[200], keyword[50];
+    printf("Enter the course description:\n");
+    fgets(description, sizeof(description), stdin);
+    description[strcspn(description, "\n")] = '\0';
+    printf("Enter the keyword to search:\n");
+    fgets(keyword, sizeof(keyword), stdin);
+    keyword[strcspn(keyword, "\n")] = '\0';
+    if (strstr(description, keyword) != NULL) {
+        printf("Keyword '%s' found in the course description.\n", keyword);
+    } else {
+        printf("Keyword '%s' not found in the course description.\n", keyword);
+    }
+}
